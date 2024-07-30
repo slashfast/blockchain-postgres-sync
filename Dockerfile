@@ -21,5 +21,5 @@ COPY --from=builder /app/target/release/consumer ./consumer
 COPY --from=builder /app/target/release/migration ./migration
 COPY --from=builder /app/migrations ./migrations/
 
+CMD ./migration up; ./consumer
 
-CMD ['./consumer']
